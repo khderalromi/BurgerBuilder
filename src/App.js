@@ -1,37 +1,33 @@
-import { Routes, Route } from "react-router-dom";
-import HomePage from "./component/Pages/HomePage/HomePage";
-import About from "./component/Pages/About/About";
-import ContactUs from "./component/Pages/ContactUs/ContactUs";
-import SignUp from "./component/Pages/SignUp/SignUp";
-import LogIn from "./component/Pages/LogIn/LogIn";
-import UserCart from "./component/Pages/UserCart/User-Cart";
-import { useEffect } from "react";
-import { fetchProducts } from "././store/Products-actions";
-import { useDispatch } from "react-redux";
-
-function App() {
-  
-  const dispatch = useDispatch()
-
-  useEffect(()=>{
-    dispatch(fetchProducts())
-  },[dispatch]) 
+import React, { Component } from 'react';
+import Layout from './components/Layout/Layout';
+import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
+import Checkout from './containers/CheckOut/CheckOut';
+import CheckoutSummary from './components/Order/checkoutSummary/checkoutSummary';
+import Orders from './containers/Orders/Orders';
+import { Route,Routes } from 'react-router-dom';
 
 
-  return (
-      <div className="App">
-        <Routes>
-          <Route path='/' element={<HomePage/>} />
-          <Route path='/Home' element={<HomePage/>} />
-          <Route path='/About' element={<About/>} />
-          <Route path='/Contact' element={<ContactUs/>} />
-          <Route path='/Sign Up' element={<SignUp/>} />
-          <Route path='/login' element={<LogIn/>} />
-          <Route path='/cart' element={<UserCart/>} />
-        </Routes>
 
-      </div>
-  );
+class App extends Component {
+  render() {
+    return (
+
+        <div className="App">
+          <Layout>
+            <Routes>
+                <Route path='/' element={<BurgerBuilder/>} />
+                <Route  path='/checkout/*' element={<Checkout/>} />
+                <Route  path='/orders' element={<Orders/> } />
+   
+            </Routes>
+        
+          
+          </Layout>
+        </div>
+ 
+      
+    );
+  }
 }
 
 export default App;

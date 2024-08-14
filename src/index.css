@@ -1,40 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-.btn{
-   @apply font-Roboto text-small sm:text-xs lg:text-lg text-white bg-red-500 pl-5 pr-5 pt-1 pb-1 sm:pl-8 sm:pr-8 sm:pt-3 sm:pb-3 
-}
-
-.btnWhite{
-    @apply font-Roboto text-small  sm:text-xs lg:text-lg text-black bg-white border-2 p-1  sm:pl-8 sm:pr-8 sm:pt-3 sm:pb-3
-}
-
-.btnBlack{
-    @apply font-Roboto text-xSmall  text-white bg-black text-xs p-1 xsmall:text-xs sm:text-xs sm:pl-8 sm:pr-8 sm:pt-3 sm:pb-3 w-full 
-}
-
-
-
-.before{
-    @apply before:content-['//'] before:pt-2 before:ml-0.5 before:bg-red-500  before:text-red-500 before:rounded
-}
-
-.custum_p{
-    @apply text-xSmall sm:text-small lg:text-sm text-gray-300
-}
-
-.drawerToggleDiv{
-    @apply  w-11/12 h-0.5 bg-black 
-}
-
-.textSize{
-    @apply text-small sm:text-sm lg:text-base font-semibold
-}
-
-.error{
-    @apply text-red-600  text-xSmall sm:text-small lg:text-sm
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
